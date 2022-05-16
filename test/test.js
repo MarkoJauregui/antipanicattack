@@ -25,10 +25,10 @@ describe('AntiPanicAttackNFT Contract', function () {
 			expect(await antiPanicAttackNFT.name()).to.equal('AntiPanicAttack');
 		});
 
-		describe('Mint Function', async () => {
-			it('NOT correct Price', async () => {
-				antiPanicAttackNFT.connect(addr1).mint();
-			});
-		});
+		// describe('Mint Function', async () => {
+		// 	it('NOT correct Price', async () => {
+		// 		antiPanicAttackNFT.connect(addr1).mint();
+		// 	});
+		// });
 	});
 });
