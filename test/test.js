@@ -12,8 +12,6 @@ describe('AntiPanicAttackNFT Contract', function () {
 			owner
 		);
 		antiPanicAttackNFT = await AntiPanicAttackNFT.deploy();
-
-		await antiPanicAttackNFT.connect(owner).setIsPublicMintEnabled(true);
 	});
 
 	describe('Deployment', async () => {
@@ -25,10 +23,8 @@ describe('AntiPanicAttackNFT Contract', function () {
 			expect(await antiPanicAttackNFT.name()).to.equal('AntiPanicAttack');
 		});
 
-		// describe('Mint Function', async () => {
-		// 	it('NOT correct Price', async () => {
-		// 		antiPanicAttackNFT.connect(addr1).mint();
-		// 	});
-		// });
+		it('should be the right symbol', async () => {
+			expect(await antiPanicAttackNFT.symbol()).to.equal('APA');
+		});
 	});
 });
