@@ -11,7 +11,7 @@ contract AntiPanicAttackNFT is ERC721, Ownable {
     uint256 public maxPerWallet;
     bool public isPublicMintEnabled;
     string internal baseTokenUri;
-    address payable public withdrawWallet;
+
     mapping(address => uint256) walletMints;
 
     constructor() payable ERC721("AntiPanicAttack", "APA") {
@@ -19,7 +19,6 @@ contract AntiPanicAttackNFT is ERC721, Ownable {
         totalSupply = 0;
         maxSupply = 52;
         maxPerWallet = 7;
-        withdrawWallet = msg.sender;
     }
 
     function setIsPublicMintEnabled(bool _isPubicMintEnabled)
@@ -51,9 +50,7 @@ contract AntiPanicAttackNFT is ERC721, Ownable {
     }
 
     function withdraw() external onlyOwner {
-        (bool success, ) = withdrawWallet.call{value: address(this).balance}(
-            ""
-        );
+        (bool success, ) = msg.sender.call{value: address(this).balance}("");
         require(success, "Withdraw Failed!");
     }
 
