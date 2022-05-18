@@ -43,7 +43,13 @@ const MainMint = ({ accounts, setAccounts }) => {
 	return (
 		<Flex justify="center" align="center" height="100vh" paddingBottom="400px">
 			<Box width="820px">
-				<Image src={Logo} width="400px" height="400px" paddingTop="150px" />
+				<Image
+					src={Logo}
+					width="400px"
+					height="400px"
+					paddingTop="150px"
+					bottom="0"
+				/>
 				<Text
 					fontSize="22px"
 					letterSpacing="-5.5%"
@@ -94,7 +100,19 @@ const MainMint = ({ accounts, setAccounts }) => {
 								+
 							</Button>
 						</Flex>
-						<button onClick={handleMint}>Mint Now</button>
+						<Button
+							backgroundColor="#FFD700"
+							borderRadius="5px"
+							boxShadow="0px 2px 2px 1px #0f0f0f"
+							color="black"
+							cursor="pointer"
+							fontFamily="inherit"
+							padding="15px"
+							marginTop="10px"
+							onClick={handleMint}
+						>
+							MINT NOW
+						</Button>
 					</div>
 				) : (
 					<p>Your wallet needs to be connected to Mint</p>
