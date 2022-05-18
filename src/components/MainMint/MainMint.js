@@ -43,21 +43,25 @@ const MainMint = ({ accounts, setAccounts }) => {
 	};
 
 	return (
-		<Flex justify="center" align="center" height="100vh" paddingBottom="400px">
+		<Flex justify="center" align="center" height="100vh" paddingBottom="550px">
 			<Box width="820px">
 				<Image
 					src={Logo}
-					width="450px"
-					height="450px"
-					paddingTop="150px"
+					width="500px"
+					height="500px"
+					padding="0"
 					display="block"
 					marginLeft="auto"
 					marginRight="auto"
+					paddingTop="200px"
 				/>
 				<Text
 					fontSize="25px"
 					letterSpacing="-5.5%"
 					textShadow="0 2px 2px #000000"
+					display="block"
+					marginTop="auto"
+					position="relative"
 				>
 					Intersections of color combinations that can become hypnotic to the{' '}
 					<br />
