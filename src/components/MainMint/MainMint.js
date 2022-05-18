@@ -55,11 +55,45 @@ const MainMint = ({ accounts, setAccounts }) => {
 				</Text>
 				{isConnected ? (
 					<div>
-						<div>
-							<button onClick={handleDecrement}>-</button>
-							<input type="number" value={mintAmount} />
-							<button onClick={handleIncrement}>+</button>
-						</div>
+						<Flex align="center" justify="center">
+							<Button
+								backgroundColor="#FFD700"
+								borderRadius="5px"
+								boxShadow="0px 2px 2px 1px #0f0f0f"
+								color="black"
+								cursor="pointer"
+								fontFamily="inherit"
+								padding="15px"
+								marginTop="10px"
+								onClick={handleDecrement}
+							>
+								-
+							</Button>
+							<Input
+								readOnly
+								fontFamily="inherit"
+								width="100px"
+								height="40px"
+								textAlign="center"
+								paddingLeft="19px"
+								marginTop="10px"
+								type="number"
+								value={mintAmount}
+							/>
+							<Button
+								backgroundColor="#FFD700"
+								borderRadius="5px"
+								boxShadow="0px 2px 2px 1px #0f0f0f"
+								color="black"
+								cursor="pointer"
+								fontFamily="inherit"
+								padding="15px"
+								marginTop="10px"
+								onClick={handleIncrement}
+							>
+								+
+							</Button>
+						</Flex>
 						<button onClick={handleMint}>Mint Now</button>
 					</div>
 				) : (
