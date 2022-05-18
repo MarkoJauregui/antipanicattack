@@ -20,26 +20,28 @@ const MainMint = ({ accounts, setAccounts }) => {
 	const [mintAmount, setMintAmount] = useState(1);
 	const isConnected = Boolean(accounts[0]);
 
-	const handleMint = async () => {
+	async function handleMint() {
 		if (window.ethereum) {
-			const provider = new ethers.providers.Web3Provider(window.ethereum); //connect ethers to blockchain
+			const provider = new ethers.providers.Web3Provider(window.ethereum);
 			const signer = provider.getSigner();
 			const contract = new ethers.Contract(
 				antiPanicAttackNFTAddress,
 				antiPanicAttackNFT.abi,
 				signer
 			);
-
 			try {
 				const response = await contract.mint(BigNumber.from(mintAmount), {
-					value: ethers.utils.parseEther((0.1 * mintAmount).toString()),
+					// value: ethers.utils.parseEther((0.1 * mintAmount).toString())
+					value: ethers.utils.parseEther(
+						(Math.round(0.1 * mintAmount * 10) / 10).toString()
+					),
 				});
 				console.log('response: ', response);
-			} catch (error) {
-				console.log('error: ', error);
+			} catch (err) {
+				console.log('error: ', err);
 			}
 		}
-	};
+	}
 
 	const handleDecrement = () => {
 		if (mintAmount <= 1) return;
