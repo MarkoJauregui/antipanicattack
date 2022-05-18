@@ -45,15 +45,15 @@ const MainMint = ({ accounts, setAccounts }) => {
 			<Box width="820px">
 				<Image
 					src={Logo}
-					width="400px"
-					height="400px"
-					paddingTop="200px"
+					width="450px"
+					height="450px"
+					paddingTop="150px"
 					display="block"
 					marginLeft="auto"
 					marginRight="auto"
 				/>
 				<Text
-					fontSize="22px"
+					fontSize="25px"
 					letterSpacing="-5.5%"
 					textShadow="0 2px 2px #000000"
 				>
