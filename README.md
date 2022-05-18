@@ -1,15 +1,18 @@
-# Basic Sample Hardhat Project
+# Anti Panic Attack NFT Collection!
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This is the repo for the Anti Panic Attack NFT Collection by 72dpi
+This project was created using...
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+- Hardhat 
+- Ethers
+- React
+- Chakra.UI.
+
+
+## Deployed Website 
+https://delicate-malabi-8505f5.netlify.app/
+
+
+## Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
