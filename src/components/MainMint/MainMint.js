@@ -47,8 +47,10 @@ const MainMint = ({ accounts, setAccounts }) => {
 					src={Logo}
 					width="400px"
 					height="400px"
-					paddingTop="150px"
-					bottom="0"
+					paddingTop="200px"
+					display="block"
+					marginLeft="auto"
+					marginRight="auto"
 				/>
 				<Text
 					fontSize="22px"
