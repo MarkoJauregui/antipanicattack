@@ -1,6 +1,15 @@
 import { useState } from 'react';
 import { ethers, BigNumber } from 'ethers';
-import { Box, Button, Flex, Image, Input, Text } from '@chakra-ui/react';
+import {
+	Box,
+	Button,
+	Flex,
+	Image,
+	Input,
+	Text,
+	Link,
+	Spacer,
+} from '@chakra-ui/react';
 import Logo from '../../assets/antipanicattacklogoblanco2.png';
 
 import antiPanicAttackNFT from '../../AntiPanicAttackNFT.json';
@@ -70,6 +79,7 @@ const MainMint = ({ accounts, setAccounts }) => {
 					<br />
 					stimulating awareness and presence and in that way lower anxiety.
 				</Text>
+
 				{isConnected ? (
 					<div>
 						<Flex align="center" justify="center">
@@ -137,6 +147,17 @@ const MainMint = ({ accounts, setAccounts }) => {
 						Connect Wallet to Mint
 					</Text>
 				)}
+
+				<Spacer />
+				<Link
+					href="https://rinkeby.etherscan.io/address/0x1A3D504513622C396601E4747e94d6fc75C73a7D"
+					isExternal
+					textDecoration="none"
+				>
+					<Text color="White" fontSize="16px">
+						Contract: 0x1A3D504513622C396601E4747e94d6fc75C73a7D
+					</Text>
+				</Link>
 			</Box>
 		</Flex>
 	);

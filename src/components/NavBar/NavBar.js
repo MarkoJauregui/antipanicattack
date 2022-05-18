@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Flex, Image, Link, Spacer } from '@chakra-ui/react';
+import { Box, Button, Flex, Image, Link, Text, Spacer } from '@chakra-ui/react';
 import Behance from '../../assets/behance.png';
 import Twitter from '../../assets/twitter.png';
 import Email from '../../assets/email.png';
@@ -39,17 +39,6 @@ const NavBar = ({ accounts, setAccounts }) => {
 				width="40%"
 				padding="30px 30px 30px 30px"
 			>
-				<Box margin="0 5px">
-					<Link
-						href="https://rinkeby.etherscan.io/address/0x1A3D504513622C396601E4747e94d6fc75C73a7D#writeContract"
-						textDecoration="none"
-						color="white"
-						fontSize="16px"
-					>
-						Contract
-					</Link>
-				</Box>
-
 				{/* <Box margin="0 15px">Mint</Box>
 				<Spacer />
 				<Box margin="0 15px">Team</Box>
