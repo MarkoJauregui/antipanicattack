@@ -119,7 +119,16 @@ const MainMint = ({ accounts, setAccounts }) => {
 						</Button>
 					</div>
 				) : (
-					<p>Your wallet needs to be connected to Mint</p>
+					<Text
+						marginTop="70px"
+						fontSize="30px"
+						letterSpacing="-5.5%"
+						fontFamily="inherit"
+						textShadow="0 3px #000000"
+						color="#FFD700"
+					>
+						Connect Wallet to Mint
+					</Text>
 				)}
 			</Box>
 		</Flex>
