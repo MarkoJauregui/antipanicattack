@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { ethers, BigNumber } from 'ethers';
+import { Box, Button, Flex, Image, Input, Text } from '@chakra-ui/react';
+
 import antiPanicAttackNFT from '../../AntiPanicAttackNFT.json';
 
 const antiPanicAttackNFTAddress = '0x1A3D504513622C396601E4747e94d6fc75C73a7D';
@@ -10,7 +12,7 @@ const MainMint = ({ accounts, setAccounts }) => {
 
 	const handleMint = async () => {
 		if (window.ethereum) {
-			const provider = new ethers.providers.Web3Provider(window.ethereum); //connnect ethers to blockchain
+			const provider = new ethers.providers.Web3Provider(window.ethereum); //connect ethers to blockchain
 			const signer = provider.getSigner();
 			const contract = new ethers.Contract(
 				antiPanicAttackNFTAddress,
