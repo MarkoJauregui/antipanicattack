@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ethers, BigNumber } from 'ethers';
 import { Box, Button, Flex, Image, Input, Text } from '@chakra-ui/react';
+import Logo from '../../assets/antipanicattacklogoblanco2.png';
 
 import antiPanicAttackNFT from '../../AntiPanicAttackNFT.json';
 
@@ -40,14 +41,18 @@ const MainMint = ({ accounts, setAccounts }) => {
 	};
 
 	return (
-		<Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-			<Box width="520px">
-				<h1>Anti Panic Attack Collection</h1>
-				<p>
+		<Flex justify="center" align="center" height="100vh" paddingBottom="400px">
+			<Box width="820px">
+				<Image src={Logo} width="400px" height="400px" paddingTop="150px" />
+				<Text
+					fontSize="22px"
+					letterSpacing="-5.5%"
+					textShadow="0 2px 2px #000000"
+				>
 					Intersections of color combinations that can become hypnotic to the
 					viewers and invite them to zoom in and out while focusing, as a way of
 					stimulating awareness and presence and in that way lower anxiety.
-				</p>
+				</Text>
 				{isConnected ? (
 					<div>
 						<div>
