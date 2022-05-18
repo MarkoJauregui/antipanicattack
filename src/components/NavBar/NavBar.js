@@ -39,12 +39,12 @@ const NavBar = ({ accounts, setAccounts }) => {
 				width="40%"
 				padding="30px 30px 30px 30px"
 			>
-				<Box margin="0 15px">About</Box>
+				{/* <Box margin="0 15px">About</Box>
 				<Spacer />
 				<Box margin="0 15px">Mint</Box>
 				<Spacer />
 				<Box margin="0 15px">Team</Box>
-				<Spacer />
+				<Spacer /> */}
 
 				{/* Connect Button */}
 				{isConnected ? (
