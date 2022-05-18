@@ -40,26 +40,28 @@ const MainMint = ({ accounts, setAccounts }) => {
 	};
 
 	return (
-		<div>
-			<h1>Anti Panic Attack Collection</h1>
-			<p>
-				Intersections of color combinations that can become hypnotic to the
-				viewers and invite them to zoom in and out while focusing, as a way of
-				stimulating awareness and presence and in that way lower anxiety.
-			</p>
-			{isConnected ? (
-				<div>
+		<Flex justify="center" align="center" height="100vh" paddingBottom="150px">
+			<Box width="520px">
+				<h1>Anti Panic Attack Collection</h1>
+				<p>
+					Intersections of color combinations that can become hypnotic to the
+					viewers and invite them to zoom in and out while focusing, as a way of
+					stimulating awareness and presence and in that way lower anxiety.
+				</p>
+				{isConnected ? (
 					<div>
-						<button onClick={handleDecrement}>-</button>
-						<input type="number" value={mintAmount} />
-						<button onClick={handleIncrement}>+</button>
+						<div>
+							<button onClick={handleDecrement}>-</button>
+							<input type="number" value={mintAmount} />
+							<button onClick={handleIncrement}>+</button>
+						</div>
+						<button onClick={handleMint}>Mint Now</button>
 					</div>
-					<button onClick={handleMint}>Mint Now</button>
-				</div>
-			) : (
-				<p>Your wallet needs to be connected to Mint</p>
-			)}
-		</div>
+				) : (
+					<p>Your wallet needs to be connected to Mint</p>
+				)}
+			</Box>
+		</Flex>
 	);
 };
 
