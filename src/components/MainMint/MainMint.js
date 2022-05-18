@@ -47,8 +47,8 @@ const MainMint = ({ accounts, setAccounts }) => {
 			<Box width="820px">
 				<Image
 					src={Logo}
-					width="500px"
-					height="500px"
+					width="550px"
+					height="350px"
 					padding="0"
 					display="block"
 					marginLeft="auto"
@@ -56,11 +56,12 @@ const MainMint = ({ accounts, setAccounts }) => {
 					paddingTop="200px"
 				/>
 				<Text
-					fontSize="25px"
-					letterSpacing="-5.5%"
+					fontSize="14px"
+					letterSpacing=".1rem"
+					lineHeight="1.5em"
 					textShadow="0 2px 2px #000000"
 					display="block"
-					marginTop="auto"
+					paddingTop="5px"
 					position="relative"
 				>
 					Intersections of color combinations that can become hypnotic to the{' '}
@@ -80,7 +81,7 @@ const MainMint = ({ accounts, setAccounts }) => {
 								cursor="pointer"
 								fontFamily="inherit"
 								padding="15px"
-								marginTop="10px"
+								marginTop="15px"
 								onClick={handleDecrement}
 							>
 								-
@@ -92,7 +93,7 @@ const MainMint = ({ accounts, setAccounts }) => {
 								height="40px"
 								textAlign="center"
 								paddingLeft="19px"
-								marginTop="10px"
+								marginTop="15px"
 								type="number"
 								value={mintAmount}
 							/>
@@ -104,7 +105,7 @@ const MainMint = ({ accounts, setAccounts }) => {
 								cursor="pointer"
 								fontFamily="inherit"
 								padding="15px"
-								marginTop="10px"
+								marginTop="15px"
 								onClick={handleIncrement}
 							>
 								+
@@ -118,7 +119,7 @@ const MainMint = ({ accounts, setAccounts }) => {
 							cursor="pointer"
 							fontFamily="inherit"
 							padding="15px"
-							marginTop="10px"
+							marginTop="5px"
 							onClick={handleMint}
 						>
 							MINT NOW
