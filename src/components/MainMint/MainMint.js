@@ -55,8 +55,10 @@ const MainMint = ({ accounts, setAccounts }) => {
 					letterSpacing="-5.5%"
 					textShadow="0 2px 2px #000000"
 				>
-					Intersections of color combinations that can become hypnotic to the
-					viewers and invite them to zoom in and out while focusing, as a way of
+					Intersections of color combinations that can become hypnotic to the{' '}
+					<br />
+					viewers and invite them to zoom in and out while focusing, as a way of{' '}
+					<br />
 					stimulating awareness and presence and in that way lower anxiety.
 				</Text>
 				{isConnected ? (
