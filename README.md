@@ -34,7 +34,21 @@ This project was created using...
 
 3. You can now run `npx hardhat test` to make sure the smart contract has no vulnerabilities. If you decide to add more tests go enter the `test/test.js` file.
 
-4. Create an account on https://infura.io/ 
+4. Create an account on https://infura.io/. Once you do create a new project and make sure to select Ethereum as the product. After that select your preferred network for the deployment, this project is set to have Rinkeby by default. Save the endpoint of your chosen network, it should look like an url. On step *Replace step number* I will show you how to change the `hardhat.config.js` file depending on the network chosen. 
+
+5. Make sure you have a Metamask account with some ETH on it. In order to get some fake one access a faucet, here is one you can use for Rinkebyhttps://faucet.rinkeby.io/. Once you have the account you want to deploy the contract in, go to your account details and extract your private key. **Make sure to not share this with anyone** 
+
+6. Create an Etherscan account and get an API key https://etherscan.io/myapikey. Make sure to save that.
+
+7. In your project source, create a `.env` file. We do this because `.env` files are automatically included in the `.gitignore` file. **This file should not be committed to Github. It's for personal use only**. 
+  Create 3 different variables:
+
+  ```
+  REACT_APP_RINKEBY_RPC_URL = "Insert the Infura endpoint here"
+  REACT_APP_ETHERSCAN_KEY = "Insert the Etherscan API"
+  REACT_APP_PRIVATE_KEY = "Insert the private key of the account that will deploy the contract"
+   ```
+8. 
 
 ## Deployed Website 
 https://delicate-malabi-8505f5.netlify.app/
