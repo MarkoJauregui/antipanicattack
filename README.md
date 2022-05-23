@@ -1,5 +1,7 @@
 # Anti Panic Attack NFT Collection!
 
+![logo](src/assets/antipanicattacklogonegro.png)
+
 This is the repo for the Anti Panic Attack NFT Collection by 72dpi. 
 
 72dpi looked to find intersections of color combinations that can become hypnotic to the viewers and invite them
