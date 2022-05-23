@@ -54,7 +54,7 @@ This project was created using...
   
 8. Your contract should now be ready to deploy! Run `npx hardhat run scripts/deploy.js --network *insert desired network*`. After a few seconds you should be getting `AntiPanicAttackNFT deployed to: *your contract address*`. Copy that address and paste it on your desired network's etherscan searchbar.  
 
-9. If you go on the contract section you should see a lot of bytecode. Something that isn't readable for humans. In order to verify the contract run `npx hardhat verify --network *desired network* *contract address*`. Once that's done you should get a success message on your terminal and the contract should be readable on Etherscan.
+9. If you go on the contract section you should see a lot of bytecode (Note that if you haven't modified the smart contract the code might already be verified). Something that isn't readable for humans. In order to verify the contract run `npx hardhat verify --network *desired network* *contract address*`. Once that's done you should get a success message on your terminal and the contract should be readable on Etherscan.
 
 10. Inside the `artifacts/contracts/AntiPanicAttackNFT.sol` folder, you should see a `AntiPanicAttack.json` file.Copy that file and paste in `AntiPanicAttack.json` replacing the existing code. That makes sure it grabs all the data from your deployment and not the existing one made by me.  
 
