@@ -28,9 +28,13 @@ This project was created using...
 
 ## Usage
 
-- Run `npx hardhat clean` in your terminal. That will make sure it will delete the artifacts folder *in the odd case you might have it by default* 
-- Run the command `npx hardhat compile` In order to compile the smart contract in the `contracts/` folder.  Which will create
+1. Run `npx hardhat clean` in your terminal. That will make sure it will delete the artifacts folder *in the odd case you might have it by default* 
 
+2. Run `npx hardhat compile` In order to compile the smart contract in the `contracts/` folder.  Which will create the artifacts folder.
+
+3. You can now run `npx hardhat test` to make sure the smart contract has no vulnerabilities. If you decide to add more tests go enter the `test/test.js` file.
+
+4. Create an account on https://infura.io/ 
 
 ## Deployed Website 
 https://delicate-malabi-8505f5.netlify.app/
