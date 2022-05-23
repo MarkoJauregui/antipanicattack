@@ -30,7 +30,7 @@ This project was created using...
 
 ## Usage
 
-1. Create an account on https://infura.io/. Once you do create a new project and make sure to select Ethereum as the product. After that select your preferred network for the deployment, this project is set to have Rinkeby by default. Save the endpoint of your chosen network, it should look like an url. On step **8** I will show you how to change the `hardhat.config.js` file depending on the network chosen. 
+1. Create an account on https://infura.io/. Once you do create a new project and make sure to select Ethereum as the product. After that select your preferred network for the deployment, this project is set to have Rinkeby by default. Save the endpoint of your chosen network, it should look like an url. On step **5** I will show you how to change the `hardhat.config.js` file depending on the network chosen. 
 
 2. Make sure you have a Metamask account with some ETH on it. In order to get some fake one access a faucet, here is one you can use for Rinkeby https://faucet.rinkeby.io/. Once you have the account you want to deploy the contract in, go to your account details and extract your private key. **Make sure to not share this with anyone** 
 
