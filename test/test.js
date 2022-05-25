@@ -37,5 +37,14 @@ describe('AntiPanicAttackNFT Contract', function () {
 				})
 			).to.be.revertedWith('Minting not enabled');
 		});
+
+		it('Should NOT allow the user to mint more than the maxPerWallet', async () => {
+			await antiPanicAttackNFT.connect(owner).setIsPublicMintEnabled(true);
+			await expect(
+				antiPanicAttackNFT
+					.connect(addr1)
+					.mint(8, { value: ethers.utils.parseEther('0.8') })
+			).to.be.revertedWith('Exceeds Wallet mints');
+		});
 	});
 });
