@@ -10,11 +10,10 @@ describe('AntiPanicAttackNFT Contract', function () {
 		addr4,
 		addr5,
 		addr6,
-		addr7,
 		antiPanicAttackNFT;
 
 	beforeEach(async () => {
-		[owner, addr1, addr2, addr3, addr4, addr5, addr6, addr7] =
+		[owner, addr1, addr2, addr3, addr4, addr5, addr6] =
 			await ethers.getSigners();
 
 		AntiPanicAttackNFT = await ethers.getContractFactory(
@@ -87,6 +86,20 @@ describe('AntiPanicAttackNFT Contract', function () {
 			await expect(
 				antiPanicAttackNFT.connect(owner).mint(7, mintValue)
 			).to.be.revertedWith('Sold Out!');
+		});
+
+		it('Should Mint token', async () => {
+			const baseUri = 'ipfs://test.url/';
+			antiPanicAttackNFT.connect(owner).setBaseTokenUri(baseUri);
+
+			await antiPanicAttackNFT.connect(owner).setIsPublicMintEnabled(true);
+
+			await antiPanicAttackNFT
+				.connect(addr1)
+				.mint(1, { value: ethers.utils.parseEther('0.1') });
+
+			expect(await antiPanicAttackNFT.tokenURI(1)).to.equal(baseUri + `1.json`);
+			expect(await antiPanicAttackNFT.ownerOf(1)).to.equal(addr1.address);
 		});
 	});
 });
