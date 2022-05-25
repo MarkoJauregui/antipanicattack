@@ -2,10 +2,20 @@ const { expect } = require('chai');
 const { ethers } = require('hardhat');
 
 describe('AntiPanicAttackNFT Contract', function () {
-	let AntiPanicAttackNFT, owner, addr1, addr2, addr3, antiPanicAttackNFT;
+	let AntiPanicAttackNFT,
+		owner,
+		addr1,
+		addr2,
+		addr3,
+		addr4,
+		addr5,
+		addr6,
+		addr7,
+		antiPanicAttackNFT;
 
 	beforeEach(async () => {
-		[owner, addr1, addr2, addr3] = await ethers.getSigners();
+		[owner, addr1, addr2, addr3, addr4, addr5, addr6, addr7] =
+			await ethers.getSigners();
 
 		AntiPanicAttackNFT = await ethers.getContractFactory(
 			'AntiPanicAttackNFT',
@@ -54,6 +64,29 @@ describe('AntiPanicAttackNFT Contract', function () {
 					.connect(addr1)
 					.mint(2, { value: ethers.utils.parseEther('0.1') })
 			).to.be.revertedWith('Wrong mint value');
+		});
+
+		it('Should NOT mint more than the maxSupply', async () => {
+			await antiPanicAttackNFT.connect(owner).setIsPublicMintEnabled(true);
+
+			const mintValue = { value: ethers.utils.parseEther('0.7') };
+			await antiPanicAttackNFT.connect(owner).mint(7, mintValue); //7 totalSupply
+
+			await antiPanicAttackNFT.connect(addr1).mint(7, mintValue); //14
+
+			await antiPanicAttackNFT.connect(addr2).mint(7, mintValue); //21
+
+			await antiPanicAttackNFT.connect(addr3).mint(7, mintValue); // 28
+
+			await antiPanicAttackNFT.connect(addr4).mint(7, mintValue); //35
+
+			await antiPanicAttackNFT.connect(addr5).mint(7, mintValue); //42
+
+			await antiPanicAttackNFT.connect(addr6).mint(7, mintValue); //49
+
+			await expect(
+				antiPanicAttackNFT.connect(owner).mint(7, mintValue)
+			).to.be.revertedWith('Sold Out!');
 		});
 	});
 });
