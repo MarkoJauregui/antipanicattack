@@ -46,5 +46,14 @@ describe('AntiPanicAttackNFT Contract', function () {
 					.mint(8, { value: ethers.utils.parseEther('0.8') })
 			).to.be.revertedWith('Exceeds Wallet mints');
 		});
+
+		it('Should NOT mint with wrong values', async () => {
+			await antiPanicAttackNFT.connect(owner).setIsPublicMintEnabled(true);
+			await expect(
+				antiPanicAttackNFT
+					.connect(addr1)
+					.mint(2, { value: ethers.utils.parseEther('0.1') })
+			).to.be.revertedWith('Wrong mint value');
+		});
 	});
 });
