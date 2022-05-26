@@ -11,6 +11,9 @@ to zoom in and out while focusing, as a way of stimulating awareness and presenc
 The files are prepared to be printed at 4500x800 pixels/ 62,5 x 111 inches/ 1.60 x 2 meters and they should be accompanied by a 432 h vibration when used for meditation. 
 
 
+## Deployed Website 
+https://delicate-malabi-8505f5.netlify.app/
+
 ## Dependencies 
 
 This project was created using...
@@ -64,8 +67,6 @@ This project was created using...
 11. Run `npm start` and you should see the working dapp on your `localhost:3000`!  
 
 
-## Deployed Website 
-https://delicate-malabi-8505f5.netlify.app/
 
 ## Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
