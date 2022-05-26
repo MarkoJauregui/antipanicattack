@@ -66,26 +66,22 @@ describe('AntiPanicAttackNFT Contract', function () {
 		});
 
 		it('Should NOT mint more than the maxSupply', async () => {
+			const addrList = [owner, addr1, addr2, addr3, addr4, addr5, addr6];
+			let maxSupply = 52;
+
 			await antiPanicAttackNFT.connect(owner).setIsPublicMintEnabled(true);
 
 			const mintValue = { value: ethers.utils.parseEther('0.7') };
-			await antiPanicAttackNFT.connect(owner).mint(7, mintValue); //7 totalSupply
 
-			await antiPanicAttackNFT.connect(addr1).mint(7, mintValue); //14
-
-			await antiPanicAttackNFT.connect(addr2).mint(7, mintValue); //21
-
-			await antiPanicAttackNFT.connect(addr3).mint(7, mintValue); // 28
-
-			await antiPanicAttackNFT.connect(addr4).mint(7, mintValue); //35
-
-			await antiPanicAttackNFT.connect(addr5).mint(7, mintValue); //42
-
-			await antiPanicAttackNFT.connect(addr6).mint(7, mintValue); //49
-
-			await expect(
-				antiPanicAttackNFT.connect(owner).mint(7, mintValue)
-			).to.be.revertedWith('Sold Out!');
+			for (const addr of addrList) {
+				if (maxSupply >= 52) {
+					await antiPanicAttackNFT.connect(addr).mint(7, mintValue);
+				} else {
+					await expect(
+						antiPanicAttackNFT.connect(owner).mint(7, mintValue)
+					).to.be.revertedWith('Sold Out!');
+				}
+			}
 		});
 
 		it('Should Mint token', async () => {
