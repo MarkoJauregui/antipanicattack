@@ -2,7 +2,8 @@
 
 ![logo](src/assets/antipanicattacklogonegro.png)
 
-This is the repo for the Anti Panic Attack NFT Collection by 72dpi. 
+This is the repo for the Anti Panic Attack NFT Collection by 72dpi. (Rinkeby)
+
 
 72dpi looked to find intersections of color combinations that can become hypnotic to the viewers and invite them
 to zoom in and out while focusing, as a way of stimulating awareness and presence and in that way lower anxiety.
