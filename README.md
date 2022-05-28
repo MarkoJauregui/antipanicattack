@@ -64,7 +64,9 @@ This project was created using...
 
 10. Inside the `artifacts/contracts/AntiPanicAttackNFT.sol` folder, you should see a `AntiPanicAttack.json` file.Copy that file and paste in `AntiPanicAttack.json` replacing the existing code. That makes sure it grabs all the data from your deployment and not the existing one made by me.  
 
-11. Run `npm start` and you should see the working dapp on your `localhost:3000`!  
+11. Run `npm start` and you should see the working dapp on your `localhost:3000`!
+  
+12. You can search for your contract address on Etherscan. Connect the wallet that deployed the contract on the `Write Contract` section. You should set the ipfs url on the `setBaseTokenUri` function, and also set the `isPublicMintEnabled` to `true`. The NFT collection is ready to be minted!
 
 
 
